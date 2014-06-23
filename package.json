@@ -1,6 +1,6 @@
 {
   "name": "heinzelmannchen-gen-fstree",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "it creates data from a file system tree",
   "main": "index.js",
   "directories": {
