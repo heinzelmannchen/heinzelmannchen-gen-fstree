@@ -1,0 +1,37 @@
+{
+    "domains": {
+        "all" : {
+            "data": {
+                "generatorName" : "heinzelmannchen-gen-fstree",
+                "generatorDescription" : "it creates data from a file system tree",
+                "author" : "Sebastian Sprenger",
+                "url" : "http://github.com/heinzelmannchen/heinzelmannchen-gen-fstree"
+            },
+            "package_json" : {
+                "template": "heinzelmannchen-tpl-default-config/generator/package.json.tpl",
+                "output": "./package.json"
+            },
+            "readme" : {
+                "template": "heinzelmannchen-tpl-default-config/generator/README.md.tpl",
+                "output": "./README.md"
+            },
+            "index" : {
+                "template": "heinzelmannchen-tpl-default-config/generator/index.js.tpl",
+                "output": "./index.js"
+            },
+            "test" : {
+                "template": "heinzelmannchen-tpl-default-config/generator/compliance.js.tpl",
+                "output": "./test/compliance.js"
+            },
+            "gitignore" : {
+                "template": "heinzelmannchen-tpl-default-config/generator/gitignore.tpl",
+                "output": "./.gitignore"
+            }
+        }
+    },
+    "generators": {
+    },
+    "templates": {
+        "heinzelmannchen-tpl-default-config" : "git+http://github.com/heinzelmannchen/heinzelmannchen-tpl-default-config"
+    }
+}
