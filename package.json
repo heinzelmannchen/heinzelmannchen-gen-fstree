@@ -1,5 +1,5 @@
 {
-  "name": "heinzelmannchen-gen-heinzelmannchen-gen-fstree",
+  "name": "heinzelmannchen-gen-fstree",
   "version": "1.0.2",
   "description": "it creates data from a file system tree",
   "main": "index.js",
@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "q": "~1.0.0",
-    "heinzelmannchen-generator": "~1.0.0"
+    "heinzelmannchen-generator": "~1.0.0",
+    "underscore": "^1.6.0"
   },
   "devDependencies": {
     "chai": "^1.9.1",

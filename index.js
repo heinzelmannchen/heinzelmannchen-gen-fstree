@@ -1,14 +1,20 @@
 var Q = require('q'),
 	fs = require('fs'),
+	_ = require('underscore'),
+	path = require('path'),
     Parent = require('heinzelmannchen-generator'),
     Generator = Parent.inherit();
 
 Generator.prototype.createData = function() {
-	var q = Q.defer();
+	var q = Q.defer(),
+		config = this.config;
+	
+	config.path = config.path || '.';
 
-    Q.nfcall(fs.readdir, this.config.path)
+    Q.nfcall(fs.readdir, config.path)
 		.then(function (files) {
-			q.resolve(files);
+			files = _.map(files, function(file) { return path.join(config.path, file); });
+			q.resolve({ files: files });
 		})
 		.fail(function (error) {
 			q.reject(error);
@@ -18,7 +24,7 @@ Generator.prototype.createData = function() {
 };
 
 Generator.explain = function() {
-    return '[\'file1.txt\', \'file2.jpg\', \'file3.js\']';
+    return '{ files: [\'file1.txt\', \'file2.jpg\', \'file3.js\', ...]}';
 };
 
 Generator.help = function() { };
