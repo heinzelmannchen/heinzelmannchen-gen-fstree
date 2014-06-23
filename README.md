@@ -1,4 +1,4 @@
-heinzelmannchen-gen-heinzelmannchen-gen-fstree
+heinzelmannchen-gen-fstree
 =========================
 
 it creates data from a file system tree
