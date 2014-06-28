@@ -14,7 +14,7 @@ Generator.prototype.createData = function() {
     Q.nfcall(fs.readdir, config.path)
 		.then(function (files) {
 			files = _.map(files, function(file) { return path.join(config.path, file); });
-			q.resolve({ files: files });
+			q.resolve({data: { files: files }});
 		})
 		.fail(function (error) {
 			q.reject(error);
